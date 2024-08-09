@@ -46,9 +46,13 @@ def compare_giveaways(old_list, new_list):
     
     return added, removed
 
-def load_config(filename='config.json'):
-    with open(filename, 'r') as file:
-        return json.load(file)
+def load_config():
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    config_path = os.path.join(script_dir, 'config.json')
+
+    with open(config_path, 'r') as file:
+        config = json.load(file)
+    return config
 
 def download_image(image_url, filename):
     response = requests.get(image_url)

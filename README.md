@@ -4,4 +4,4 @@ Alerts you when new giveaways are announced
 
 Update `config.json` with your discord webhook url
 
-Add to your crontab for 9am every morning `0 9 * * * /usr/bin/python3 /path/to/your/rrr_giveaways.py`
+Add to your crontab for 10am every morning 0 10 \* \* \* /usr/bin/python3 /your/path/rrr_giveaway_alerter/rrr_giveaways.py >> /your/path/rrr_giveaway_alerter/cron.log 2>&1
